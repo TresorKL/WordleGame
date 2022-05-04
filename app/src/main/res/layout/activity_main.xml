@@ -4,15 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/white"
+    >
 
     <!-- TEXT INPUT CONTAINER -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_centerVertical="true"
 
         >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WORDLE"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:textSize="40sp"
+            />
 
         <!-- ROW ONE -->
         <LinearLayout
@@ -23,43 +34,59 @@
             >
 
             <EditText
+                android:id="@+id/r1c1"
                 android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:layout_marginTop="20sp"
                 android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
                 android:background="@drawable/custom_input"/>
 
             <EditText
+                android:id="@+id/r1c2"
                 android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:layout_marginTop="20sp"
                 android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
                 android:background="@drawable/custom_input"/>
             <EditText
+                android:id="@+id/r1c3"
                 android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:layout_marginTop="20sp"
                 android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
                 android:background="@drawable/custom_input"/>
             <EditText
+                android:id="@+id/r1c4"
                 android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:layout_marginTop="20sp"
                 android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
                 android:background="@drawable/custom_input"/>
             <EditText
+                android:id="@+id/r1c5"
                 android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:layout_marginTop="20sp"
                 android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
                 android:background="@drawable/custom_input"/>
 
         </LinearLayout>
+        <!-- ROW TWO -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -68,43 +95,59 @@
             >
 
             <EditText
+                android:id="@+id/r2c1"
                 android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:layout_marginTop="20sp"
                 android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
                 android:background="@drawable/custom_input"/>
 
             <EditText
+                android:id="@+id/r2c2"
                 android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:layout_marginTop="20sp"
                 android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
                 android:background="@drawable/custom_input"/>
             <EditText
+                android:id="@+id/r2c3"
                 android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:layout_marginTop="20sp"
                 android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
                 android:background="@drawable/custom_input"/>
             <EditText
+                android:id="@+id/r2c4"
                 android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:layout_marginTop="20sp"
                 android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
                 android:background="@drawable/custom_input"/>
             <EditText
+                android:id="@+id/r2c5"
                 android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:layout_marginTop="20sp"
                 android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
                 android:background="@drawable/custom_input"/>
 
         </LinearLayout>
+        <!-- ROW THREE -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -113,43 +156,59 @@
             >
 
             <EditText
+                android:id="@+id/r3c1"
                 android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:layout_marginTop="20sp"
                 android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
                 android:background="@drawable/custom_input"/>
 
             <EditText
+                android:id="@+id/r3c2"
                 android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:layout_marginTop="20sp"
                 android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
                 android:background="@drawable/custom_input"/>
             <EditText
+                android:id="@+id/r3c3"
                 android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:layout_marginTop="20sp"
                 android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
                 android:background="@drawable/custom_input"/>
             <EditText
+                android:id="@+id/r3c4"
                 android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:layout_marginTop="20sp"
                 android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
                 android:background="@drawable/custom_input"/>
             <EditText
+                android:id="@+id/r3c5"
                 android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:layout_marginTop="20sp"
                 android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
                 android:background="@drawable/custom_input"/>
 
         </LinearLayout>
+        <!-- ROW FOUR -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -158,43 +217,59 @@
             >
 
             <EditText
+                android:id="@+id/r4c1"
                 android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:layout_marginTop="20sp"
                 android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
                 android:background="@drawable/custom_input"/>
 
             <EditText
+                android:id="@+id/r4c2"
                 android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:layout_marginTop="20sp"
                 android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
                 android:background="@drawable/custom_input"/>
             <EditText
+                android:id="@+id/r4c3"
                 android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:layout_marginTop="20sp"
                 android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
                 android:background="@drawable/custom_input"/>
             <EditText
+                android:id="@+id/r4c4"
                 android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:layout_marginTop="20sp"
                 android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
                 android:background="@drawable/custom_input"/>
             <EditText
+                android:id="@+id/r4c5"
                 android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:layout_marginTop="20sp"
                 android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
                 android:background="@drawable/custom_input"/>
 
         </LinearLayout>
+        <!-- ROW FIVE -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -203,92 +278,69 @@
             >
 
             <EditText
+                android:id="@+id/r5c1"
                 android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:layout_marginTop="20sp"
                 android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
                 android:background="@drawable/custom_input"/>
 
             <EditText
+                android:id="@+id/r5c2"
                 android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:layout_marginTop="20sp"
                 android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
                 android:background="@drawable/custom_input"/>
             <EditText
+                android:id="@+id/r5c3"
                 android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:layout_marginTop="20sp"
                 android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
                 android:background="@drawable/custom_input"/>
             <EditText
+                android:id="@+id/r5c4"
                 android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:layout_marginTop="20sp"
                 android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
                 android:background="@drawable/custom_input"/>
             <EditText
+                android:id="@+id/r5c5"
                 android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:layout_marginTop="20sp"
                 android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
                 android:background="@drawable/custom_input"/>
 
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/submitWord"
+            android:layout_width="200sp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginTop="50sp"
             android:layout_gravity="center"
-            >
+            android:background="@drawable/custom_button"
+            android:text="SUBMIT"
+            />
 
-            <EditText
-                android:layout_width="40sp"
-                android:layout_height="wrap_content"
-                android:textSize="30sp"
-                android:layout_marginTop="20sp"
-                android:layout_marginRight="20sp"
-                android:background="@drawable/custom_input"/>
+  </LinearLayout>
 
-            <EditText
-                android:layout_width="40sp"
-                android:layout_height="wrap_content"
-                android:textSize="30sp"
-                android:layout_marginTop="20sp"
-                android:layout_marginRight="20sp"
-                android:background="@drawable/custom_input"/>
-            <EditText
-                android:layout_width="40sp"
-                android:layout_height="wrap_content"
-                android:textSize="30sp"
-                android:layout_marginTop="20sp"
-                android:layout_marginRight="20sp"
-                android:background="@drawable/custom_input"/>
-            <EditText
-                android:layout_width="40sp"
-                android:layout_height="wrap_content"
-                android:textSize="30sp"
-                android:layout_marginTop="20sp"
-                android:layout_marginRight="20sp"
-                android:background="@drawable/custom_input"/>
-            <EditText
-                android:layout_width="40sp"
-                android:layout_height="wrap_content"
-                android:textSize="30sp"
-                android:layout_marginTop="20sp"
-                android:layout_marginRight="20sp"
-                android:background="@drawable/custom_input"/>
-
-        </LinearLayout>
-
-
-
-
-    </LinearLayout>
 
 </RelativeLayout>
