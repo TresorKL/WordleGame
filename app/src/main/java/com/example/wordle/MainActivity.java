@@ -12,27 +12,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     Button submitWordBtn;
-    // access all the edittexts
 
-
-
-    /*  EditText r1c1 = findViewById(R.id.r1c1);
-    EditText r1c2 = findViewById(R.id.r1c2);
-    EditText r1c3 = findViewById(R.id.r1c3);
-    EditText r1c4 = findViewById(R.id.r1c4);
-    EditText r1c5 = findViewById(R.id.r1c5);
-
-
-
-      String r1c1Str = r1c1.getText().toString();
-                String r1c2Str = r1c2.getText().toString();
-                String r1c3Str = r1c3.getText().toString();
-                String r1c4Str = r1c4.getText().toString();
-                String r1c5Str = r1c5.getText().toString();
-
-                String wordStr =r1c1Str+r1c2Str+r1c3Str+r1c4Str+r1c5Str;
-                String[] word={r1c1Str,r1c2Str,r1c3Str,r1c4Str,r1c5Str};
-    * */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,29 +27,34 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+              int count=0;
 
-              String word=  getSpecificRowWord(0);
 
+              while(count!=5) {
 
-                  for (int i=0;i< word.length();i++){
+                  String word=  getSpecificRowWord(count);
+                  for (int i = 0; i < word.length(); i++) {
                       char letter = word.charAt(i);
-                      if(randomWord.charAt(i)==letter){
-                          int index= randomWord.indexOf(letter);
-                          setColorLetterExistCorrectPosition(0, index);
+                      if (randomWord.charAt(i) == letter) {
+                          //int index= randomWord.indexOf(letter);
+                          setColorLetterExistCorrectPosition(count, i);
 
 
-                      }else if(randomWord.indexOf(letter)!=-1){
-                          int index= randomWord.indexOf(letter);
-                          setColorLetterExistWrongPosition(0,index);
+                      } else if (randomWord.indexOf(letter) != -1) {
+                          //int index= randomWord.indexOf(letter);
+                          setColorLetterExistWrongPosition(count, i);
 
-                      }else{
+                      } else {
 
+                          //  int index= randomWord.indexOf(letter);
+                          setColorLetterDosnotExist(count, i);
+                          // Toast.makeText(MainActivity.this,"WRONG", Toast.LENGTH_SHORT).show();
                       }
                   }
-             // }
+                  count++;
 
-              Toast.makeText(MainActivity.this,word, Toast.LENGTH_SHORT).show();
-
+                  // Toast.makeText(MainActivity.this,word, Toast.LENGTH_SHORT).show();
+              }
             }
         });
         
@@ -148,6 +133,26 @@ public class MainActivity extends AppCompatActivity {
 
         EditText letter = findViewById(resID);
         Drawable green = getResources().getDrawable(R.drawable.letterexist_wrongposition);
+        letter.setBackground(green);
+
+    }
+    public void setColorLetterDosnotExist(int rowNo, int column){
+        String [][]ids = {
+                {"r1c1","r1c2","r1c3","r1c4","r1c5"},
+                {"r2c1","r2c2","r2c3","r2c4","r2c5"},
+                {"r3c1","r3c2","r3c3","r3c4","r3c5"},
+                {"r4c1","r4c2","r4c3","r4c4","r5c5"},
+                {"r5c1","r5c2","r5c3","r5c4","r5c5"}
+        };
+
+        String currentId =ids[rowNo][column];
+
+
+        int resID = getResources().getIdentifier(currentId,
+                "id", getPackageName());
+
+        EditText letter = findViewById(resID);
+        Drawable green = getResources().getDrawable(R.drawable.letter_doesnot_exist);
         letter.setBackground(green);
 
     }
