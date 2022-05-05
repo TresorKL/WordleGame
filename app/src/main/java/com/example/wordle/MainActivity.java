@@ -1,23 +1,36 @@
 package com.example.wordle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+
 
 public class MainActivity extends AppCompatActivity {
 
     Button submitWordBtn;
 
 
+    private Toolbar myToolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        myToolbar = findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+
+
+
+
+
+
         String randomWord="TRESO";
 
         submitWordBtn= findViewById(R.id.submitWord);
@@ -61,6 +74,13 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+         getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
     }
 
     // this method retrieve a word from a specific row of letters

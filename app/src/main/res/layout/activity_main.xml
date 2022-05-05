@@ -8,6 +8,28 @@
     android:background="@color/white"
     >
 
+    <!-- TOOL/APP BAR -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:background="@drawable/custom_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- IMAGE ICON -->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:src="@drawable/wordle_image"
+                android:layout_marginLeft="80sp"
+                />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
     <!-- TEXT INPUT CONTAINER -->
     <LinearLayout
         android:layout_width="match_parent"
