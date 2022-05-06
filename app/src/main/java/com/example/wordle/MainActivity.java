@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     WGameProcessor processor = new WGameProcessor(this);
     Button submitWordBtn;
-    int userChoice = 1;
+
 
 
 
@@ -39,16 +39,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        List<String> wordlist = processor.generateSpecificWordList(userChoice);
+
         // customize toolbar
         myToolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
-
-
-
-        // the word to be guessed
+//---------------------------------------------------------
+//   generate a specific wordlist from user choice
+//--------------------------------------------------------
+        int userChoice = 1;
+        List<String> wordlist = processor.generateSpecificWordList(userChoice);
+//---------------------------------------------------------
+//   generate a random word from the selected wordlist
+//--------------------------------------------------------
         String randomWord=processor.generateRandomWord(wordlist);
-       // String randomWord=processor.generateRandomWord(wordlist);
+
 
         // accessing the submit button
         submitWordBtn= findViewById(R.id.submitWord);
@@ -58,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                // row counter
+             // row counter
               int rowCount=0;
 
 

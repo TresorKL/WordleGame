@@ -4,13 +4,8 @@ import android.content.Context;
 import android.content.res.AssetManager;
 
 
-import java.io.BufferedReader;
-import java.io.DataInputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileReader;
+
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -23,8 +18,7 @@ public class WGameProcessor {
 
         this.myContext = myContext;
     }
-
-
+    
 //------------------------------------------------------------------------------------------------------
     // generate a specific list of words from the given text files :
 //------------------------------------------------------------------------------------------------------
@@ -47,7 +41,7 @@ public class WGameProcessor {
                 mainFile = am.open("wrdl5.txt");
 
             }
-            //InputStream specificFile =file;
+
 
 
             int size= mainFile.available();
