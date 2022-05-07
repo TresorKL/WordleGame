@@ -11,7 +11,11 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+
+        >
+
+
         <!-- TOOL/APP BAR -->
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/my_toolbar"
@@ -26,7 +30,19 @@
                 android:layout_marginLeft="80sp"
                 />
 
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/mySpinser"
+                android:layout_marginLeft="20sp"
+                android:background="@drawable/custom_spiner"
+                />
+
+
+
         </androidx.appcompat.widget.Toolbar>
+
+
 
     </com.google.android.material.appbar.AppBarLayout>
 

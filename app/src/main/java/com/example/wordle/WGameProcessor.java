@@ -31,15 +31,20 @@ public class WGameProcessor {
         InputStream mainFile=null;
         String word="";
 
-        try {
+         try {
+
+
 
             AssetManager am = myContext.getAssets();
 
-            mainFile = am.open("wrdltest.txt");
+
+
 
             if(userChoice==1) {
                 mainFile = am.open("wrdl5.txt");
 
+            }else {
+                mainFile = am.open("wrdltest.txt");
             }
 
 

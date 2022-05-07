@@ -9,8 +9,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -41,11 +43,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        int userChoice;
+        Spinner spinner = (Spinner)findViewById(R.id.mySpinser);
+        ArrayAdapter<String> myAdapter = new ArrayAdapter<String> (MainActivity.this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.files));
+        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(myAdapter);
+
+        String userChoiceStr = spinner.getSelectedItem().toString();
+        Toast.makeText(MainActivity.this,userChoiceStr, Toast.LENGTH_LONG).show();
+
+        if("File 1".compareTo(userChoiceStr)==0){
+            userChoice = 0;
+        }else{
+            userChoice = 1;
+        }
+
+
 
 //---------------------------------------------------------
 //   generate a specific wordlist from user choice
 //--------------------------------------------------------
-        int userChoice = 1;
+
         List<String> wordlist = processor.generateSpecificWordList(userChoice);
         //---------------------------------------------------------
 //   generate a random word from the selected wordlist
@@ -99,10 +118,8 @@ public class MainActivity extends AppCompatActivity {
 
              // row counter
              int rowCount=0;
-            // String wordToGuess = randomWord;
 
-
-              while(rowCount !=6) {
+             while(rowCount !=6) {
 
                   String word=  getSpecificRowWord(rowCount);
                   for (int i = 0; i < word.length(); i++) {
@@ -129,10 +146,7 @@ public class MainActivity extends AppCompatActivity {
                           revealWordBtn.setBackground(stylebtn);
                           playAgainBtn.setBackground(stylebtn);
 
-
-
-
-                      }  else {
+                     }  else {
 
 
                           setColorLetterDosnotExist(rowCount, i);
@@ -142,16 +156,9 @@ public class MainActivity extends AppCompatActivity {
 
                   rowCount++;
 
+             }
 
-                  // Toast.makeText(MainActivity.this,word, Toast.LENGTH_SHORT).show();
-              }
-
-
-
-
-
-
-            }
+           }
 
         });
 
