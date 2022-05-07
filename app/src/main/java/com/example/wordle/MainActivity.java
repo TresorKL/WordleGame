@@ -3,7 +3,9 @@ package com.example.wordle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -25,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
     WGameProcessor processor = new WGameProcessor(this);
     Button submitWordBtn;
-
+    Button playAgainBtn;
+    Button revealWordBtn;
 
 
 
@@ -39,34 +42,67 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-
-        // customize toolbar
-        myToolbar = findViewById(R.id.my_toolbar);
-        setSupportActionBar(myToolbar);
 //---------------------------------------------------------
 //   generate a specific wordlist from user choice
 //--------------------------------------------------------
         int userChoice = 1;
         List<String> wordlist = processor.generateSpecificWordList(userChoice);
-//---------------------------------------------------------
+        //---------------------------------------------------------
 //   generate a random word from the selected wordlist
 //--------------------------------------------------------
         String randomWord=processor.generateRandomWord(wordlist);
 
 
-        // accessing the submit button
+
+        // customize toolbar
+        myToolbar = findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+
+
+
+        // accessing the submit buttons
         submitWordBtn= findViewById(R.id.submitWord);
+        playAgainBtn = findViewById(R.id.playAgain);
+        revealWordBtn = findViewById(R.id.revealWord);
+
+        // disable some buttons
+        playAgainBtn.setEnabled(false);
+        revealWordBtn.setEnabled(false);
+
+        //event listener of play again button
+        playAgainBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                playAgain();
+
+            }
+        });
+        // event listener of reveal word button
+        revealWordBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Toast.makeText(MainActivity.this,randomWord, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
 
         // event listener of the submit button
         submitWordBtn.setOnClickListener(new View.OnClickListener() {
+
+
+
             @Override
             public void onClick(View view) {
 
              // row counter
-              int rowCount=0;
+             int rowCount=0;
+            // String wordToGuess = randomWord;
 
 
-              while(rowCount!=5) {
+              while(rowCount !=6) {
 
                   String word=  getSpecificRowWord(rowCount);
                   for (int i = 0; i < word.length(); i++) {
@@ -80,23 +116,44 @@ public class MainActivity extends AppCompatActivity {
 
                           setColorLetterExistWrongPosition(rowCount, i);
 
-                      } else {
+                     // enable and style revealWord and play again buttons when user guess wrongly six time
+                      }else if((randomWord.compareTo(word)!=0) && rowCount==5){
+
+                          if(randomWord.charAt(i) != letter){
+                              setColorLetterDosnotExist(rowCount, i);
+                          }
+                          // enable buttons
+                          playAgainBtn.setEnabled(true);
+                          revealWordBtn.setEnabled(true);
+                          Drawable stylebtn = getResources().getDrawable(R.drawable.custom_small_btn);
+                          revealWordBtn.setBackground(stylebtn);
+                          playAgainBtn.setBackground(stylebtn);
+
+
+
+
+                      }  else {
 
 
                           setColorLetterDosnotExist(rowCount, i);
                           // Toast.makeText(MainActivity.this,"WRONG", Toast.LENGTH_SHORT).show();
                       }
                   }
-                  Toast.makeText(MainActivity.this,randomWord, Toast.LENGTH_SHORT).show();
+
                   rowCount++;
+
 
                   // Toast.makeText(MainActivity.this,word, Toast.LENGTH_SHORT).show();
               }
+
+
+
+
+
+
             }
+
         });
-        
-
-
 
     }
 
@@ -112,6 +169,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
+
+//------------------------------------------------------------------------------------------------------
+    // this method helps to reset everything so the user can be able to play again
+//------------------------------------------------------------------------------------------------------
+public void playAgain() {
+    Intent mIntent = getIntent();
+    finish();
+    startActivity(mIntent);
+}
+
 //------------------------------------------------------------------------------------------------------
     // this method retrieve a word from a specific row of letters
 //------------------------------------------------------------------------------------------------------
@@ -125,7 +193,8 @@ public class MainActivity extends AppCompatActivity {
                 {"r2c1","r2c2","r2c3","r2c4","r2c5"},
                 {"r3c1","r3c2","r3c3","r3c4","r3c5"},
                 {"r4c1","r4c2","r4c3","r4c4","r4c5"},
-                {"r5c1","r5c2","r5c3","r5c4","r5c5"}
+                {"r5c1","r5c2","r5c3","r5c4","r5c5"},
+                {"r6c1","r6c2","r6c3","r6c4","r6c5"}
         };
 
         for(int i=0;i<5;i++){
@@ -158,7 +227,8 @@ public class MainActivity extends AppCompatActivity {
                 {"r2c1","r2c2","r2c3","r2c4","r2c5"},
                 {"r3c1","r3c2","r3c3","r3c4","r3c5"},
                 {"r4c1","r4c2","r4c3","r4c4","r4c5"},
-                {"r5c1","r5c2","r5c3","r5c4","r5c5"}
+                {"r5c1","r5c2","r5c3","r5c4","r5c5"},
+                {"r6c1","r6c2","r6c3","r6c4","r6c5"}
         };
 
         String currentId =ids[rowNo][column];
@@ -182,7 +252,8 @@ public class MainActivity extends AppCompatActivity {
                 {"r2c1","r2c2","r2c3","r2c4","r2c5"},
                 {"r3c1","r3c2","r3c3","r3c4","r3c5"},
                 {"r4c1","r4c2","r4c3","r4c4","r4c5"},
-                {"r5c1","r5c2","r5c3","r5c4","r5c5"}
+                {"r5c1","r5c2","r5c3","r5c4","r5c5"},
+                {"r6c1","r6c2","r6c3","r6c4","r6c5"}
         };
 
         String currentId =ids[rowNo][column];
@@ -205,7 +276,8 @@ public class MainActivity extends AppCompatActivity {
                 {"r2c1","r2c2","r2c3","r2c4","r2c5"},
                 {"r3c1","r3c2","r3c3","r3c4","r3c5"},
                 {"r4c1","r4c2","r4c3","r4c4","r4c5"},
-                {"r5c1","r5c2","r5c3","r5c4","r5c5"}
+                {"r5c1","r5c2","r5c3","r5c4","r5c5"},
+                {"r6c1","r6c2","r6c3","r6c4","r6c5"}
         };
 
         String currentId =ids[rowNo][column];

@@ -352,6 +352,67 @@
                 android:background="@drawable/custom_input"/>
 
         </LinearLayout>
+        <!-- ROW FIVE -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            >
+
+            <EditText
+                android:id="@+id/r6c1"
+                android:layout_width="40sp"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
+                android:background="@drawable/custom_input"/>
+
+            <EditText
+                android:id="@+id/r6c2"
+                android:layout_width="40sp"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
+                android:background="@drawable/custom_input"/>
+            <EditText
+                android:id="@+id/r6c3"
+                android:layout_width="40sp"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
+                android:background="@drawable/custom_input"/>
+            <EditText
+                android:id="@+id/r6c4"
+                android:layout_width="40sp"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
+                android:background="@drawable/custom_input"/>
+            <EditText
+                android:id="@+id/r6c5"
+                android:layout_width="40sp"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginRight="20sp"
+                android:textColor="@color/black"
+                android:maxLength="1"
+                android:background="@drawable/custom_input"/>
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -363,11 +424,11 @@
             >
 
             <Button
-                android:id="@+id/realword"
+                android:id="@+id/revealWord"
                 android:layout_width="90sp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@drawable/custom_small_btn"
+                android:background="@drawable/custom_disablebtn"
                 android:text="Reaveal word"
                 />
 
@@ -386,7 +447,7 @@
                 android:layout_height="wrap_content"
 
                 android:layout_gravity="center"
-                android:background="@drawable/custom_small_btn"
+                android:background="@drawable/custom_disablebtn"
                 android:text="PLAY AGAIN"
                 />
 
