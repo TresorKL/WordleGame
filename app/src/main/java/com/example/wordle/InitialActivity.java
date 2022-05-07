@@ -29,7 +29,8 @@ public class InitialActivity extends AppCompatActivity {
         howToPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.theverge.com/22892044/wordle-free-game-online-how-to-puzzle"));
+                startActivity(browserIntent);
             }
         });
 
