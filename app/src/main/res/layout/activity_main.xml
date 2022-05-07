@@ -352,15 +352,48 @@
                 android:background="@drawable/custom_input"/>
 
         </LinearLayout>
-        <Button
-            android:id="@+id/submitWord"
-            android:layout_width="200sp"
+
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50sp"
+            android:orientation="horizontal"
             android:layout_gravity="center"
-            android:background="@drawable/custom_button"
-            android:text="@string/submit_btn"
-            />
+            android:layout_marginTop="15sp"
+
+            >
+
+            <Button
+                android:id="@+id/realword"
+                android:layout_width="90sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/custom_small_btn"
+                android:text="Reaveal word"
+                />
+
+            <Button
+                android:id="@+id/submitWord"
+                android:layout_width="180sp"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:background="@drawable/custom_button"
+                android:text="@string/submit_btn"
+                />
+            <Button
+                android:id="@+id/playAgain"
+                android:layout_width="90sp"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:background="@drawable/custom_small_btn"
+                android:text="PLAY AGAIN"
+                />
+
+
+        </LinearLayout>
+
+
 
   </LinearLayout>
 
