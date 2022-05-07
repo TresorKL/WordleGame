@@ -3,6 +3,7 @@ package com.example.wordle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.widget.Spinner;
 public class InitialActivity extends AppCompatActivity {
 
     Button startGame;
+    Button howToPlay;
 
 
     @Override
@@ -23,14 +25,18 @@ public class InitialActivity extends AppCompatActivity {
          super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_initial);
 
+        howToPlay = findViewById(R.id.howToplay);
+        howToPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               
+            }
+        });
+
 
          startGame = findViewById(R.id.startGame);
 
         RadioGroup radioGroup =(RadioGroup)findViewById(R.id.files);
-
-
-
-
 
         startGame.setOnClickListener(new View.OnClickListener() {
             @Override

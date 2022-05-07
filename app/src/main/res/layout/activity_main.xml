@@ -30,17 +30,7 @@
                 android:layout_marginLeft="80sp"
                 />
 
-            <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/mySpinser"
-                android:layout_marginLeft="20sp"
-                android:background="@drawable/custom_spiner"
-                />
-
-
-
-        </androidx.appcompat.widget.Toolbar>
+         </androidx.appcompat.widget.Toolbar>
 
 
 
