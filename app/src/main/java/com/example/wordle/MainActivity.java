@@ -44,16 +44,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         int userChoice;
-        Spinner spinner = (Spinner)findViewById(R.id.mySpinser);
-        ArrayAdapter<String> myAdapter = new ArrayAdapter<String> (MainActivity.this,
-                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.files));
-        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(myAdapter);
 
-        String userChoiceStr = spinner.getSelectedItem().toString();
+
+        String userChoiceStr = getIntent().getStringExtra("userChoice");
+        String userName = getIntent().getStringExtra("userName");
+
         Toast.makeText(MainActivity.this,userChoiceStr, Toast.LENGTH_LONG).show();
 
-        if("File 1".compareTo(userChoiceStr)==0){
+        if(userChoiceStr.compareTo("File 1")==0){
             userChoice = 0;
         }else{
             userChoice = 1;

@@ -103,13 +103,31 @@
             android:textAlignment="center"
             android:textSize="25sp"/>
 
-            <Spinner
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/mySpinser"
-                    android:background="@drawable/custom_spiner"
-                    android:layout_gravity="center"
-             />
+
+            <RadioGroup
+                android:id="@+id/files"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                >
+                <RadioButton
+                    android:id="@+id/file1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50sp"
+                    android:text="File 1"
+                    />
+                <RadioButton
+                    android:id="@+id/file2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50sp"
+                    android:text="File 2"
+                    />
+
+
+            </RadioGroup>
+
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

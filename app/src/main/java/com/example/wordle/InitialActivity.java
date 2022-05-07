@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 
 public class InitialActivity extends AppCompatActivity {
@@ -22,18 +23,31 @@ public class InitialActivity extends AppCompatActivity {
          super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_initial);
 
+
          startGame = findViewById(R.id.startGame);
-        Spinner spinner = (Spinner)findViewById(R.id.mySpinser);
-        ArrayAdapter<String> myAdapter = new ArrayAdapter<String> (InitialActivity.this,
-                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.files));
-        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(myAdapter);
+
+        RadioGroup radioGroup =(RadioGroup)findViewById(R.id.files);
+
+
+
+
 
         startGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                String userChoiceStr = "File 1";
+
+                int fileSelected = radioGroup.getCheckedRadioButtonId();
+
+                if(fileSelected==R.id.file2){
+
+                    userChoiceStr = "File 2";
+                }
+
                 EditText userName =(EditText)findViewById(R.id.userName);
+
+                String userNameStr=userName.getText().toString();
 
                 if( TextUtils.isEmpty(userName.getText())){
 
@@ -41,6 +55,8 @@ public class InitialActivity extends AppCompatActivity {
 
                 }else{
                     Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
+                    mainActivity.putExtra("userChoice", userChoiceStr);
+                    mainActivity.putExtra("userName", userNameStr);
                     startActivity(mainActivity);
                 }
 
