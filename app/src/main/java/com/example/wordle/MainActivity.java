@@ -92,7 +92,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                playAgain();
+                Intent initialActivity = new Intent(getApplicationContext(), InitialActivity.class);
+                startActivity(initialActivity);
 
             }
         });
@@ -129,9 +130,9 @@ public class MainActivity extends AppCompatActivity {
                       char letter = word.charAt(i);
 
                     // if the word is exactly as the as the random word
-                    if(randomWord.charAt(0) == word.charAt(0) &&randomWord.charAt(1) == word.charAt(1)&&randomWord.charAt(2) == word.charAt(2)) {
+                    if(randomWord.charAt(0) == word.charAt(0) &&randomWord.charAt(1) == word.charAt(1)&&randomWord.charAt(2) == word.charAt(2)&&randomWord.charAt(3) == word.charAt(3)&&randomWord.charAt(4) == word.charAt(4)) {
 
-                            if(randomWord.charAt(3) == word.charAt(3)&&randomWord.charAt(4) == word.charAt(4)){
+
                                 setColorLetterExistCorrectPosition(rowCount, i);
 
                                 // enable users to play again if they win
@@ -141,9 +142,9 @@ public class MainActivity extends AppCompatActivity {
 
                                 Toast.makeText(MainActivity.this, "CONGRATILATION " + userName, Toast.LENGTH_LONG).show();
 
-                            }
+                          
 
-                        } else if (randomWord.charAt(i) == letter) {
+                     } else if (randomWord.charAt(i) == letter) {
 
                           setColorLetterExistCorrectPosition(rowCount, i);
 
