@@ -67,7 +67,8 @@ public class MainActivity extends AppCompatActivity {
         //---------------------------------------------------------
 //   generate a random word from the selected wordlist
 //--------------------------------------------------------
-        String randomWord=processor.generateRandomWord(wordlist);
+         String randomWord=processor.generateRandomWord(wordlist);
+
 
 
 
@@ -114,15 +115,35 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-             // row counter
+             String word="";
+
              int rowCount=0;
+
 
              while(rowCount !=6) {
 
-                  String word=  getSpecificRowWord(rowCount);
-                  for (int i = 0; i < word.length(); i++) {
+                   word=  getSpecificRowWord(rowCount);
+
+
+                    for (int i = 0; i < word.length(); i++) {
                       char letter = word.charAt(i);
-                      if (randomWord.charAt(i) == letter) {
+
+                    // if the word is exactly as the as the random word
+                    if(randomWord.charAt(0) == word.charAt(0) &&randomWord.charAt(1) == word.charAt(1)&&randomWord.charAt(2) == word.charAt(2)) {
+
+                            if(randomWord.charAt(3) == word.charAt(3)&&randomWord.charAt(4) == word.charAt(4)){
+                                setColorLetterExistCorrectPosition(rowCount, i);
+
+                                // enable users to play again if they win
+                                playAgainBtn.setEnabled(true);
+                                Drawable stylebtn = getResources().getDrawable(R.drawable.custom_small_btn);
+                                playAgainBtn.setBackground(stylebtn);
+
+                                Toast.makeText(MainActivity.this, "CONGRATILATION " + userName, Toast.LENGTH_LONG).show();
+
+                            }
+
+                        } else if (randomWord.charAt(i) == letter) {
 
                           setColorLetterExistCorrectPosition(rowCount, i);
 
@@ -135,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
                       }else if((randomWord.compareTo(word)!=0) && rowCount==5){
 
                           if(randomWord.charAt(i) != letter){
-                              setColorLetterDosnotExist(rowCount, i);
+                            setColorLetterDosnotExist(rowCount, i);
                           }
                           // enable buttons
                           playAgainBtn.setEnabled(true);
@@ -144,17 +165,24 @@ public class MainActivity extends AppCompatActivity {
                           revealWordBtn.setBackground(stylebtn);
                           playAgainBtn.setBackground(stylebtn);
 
-                     }  else {
-
+                     }  else if(randomWord.charAt(i) != letter) {
 
                           setColorLetterDosnotExist(rowCount, i);
-                          // Toast.makeText(MainActivity.this,"WRONG", Toast.LENGTH_SHORT).show();
-                      }
+
+                       }
+
+
                   }
 
-                  rowCount++;
+
+               rowCount++;
+
+
 
              }
+
+
+
 
            }
 
