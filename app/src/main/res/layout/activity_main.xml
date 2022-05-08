@@ -70,6 +70,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
 
             <EditText
@@ -81,6 +82,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
             <EditText
                 android:id="@+id/r1c3"
@@ -91,6 +93,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
             <EditText
                 android:id="@+id/r1c4"
@@ -101,6 +104,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
             <EditText
                 android:id="@+id/r1c5"
@@ -111,6 +115,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
 
         </LinearLayout>
@@ -131,6 +136,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
 
             <EditText
@@ -142,6 +148,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
             <EditText
                 android:id="@+id/r2c3"
@@ -152,6 +159,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
             <EditText
                 android:id="@+id/r2c4"
@@ -162,6 +170,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
             <EditText
                 android:id="@+id/r2c5"
@@ -172,6 +181,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
 
         </LinearLayout>
@@ -192,6 +202,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
 
             <EditText
@@ -203,6 +214,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
             <EditText
                 android:id="@+id/r3c3"
@@ -213,6 +225,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
             <EditText
                 android:id="@+id/r3c4"
@@ -223,6 +236,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
             <EditText
                 android:id="@+id/r3c5"
@@ -233,6 +247,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
 
         </LinearLayout>
@@ -253,6 +268,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
 
             <EditText
@@ -264,6 +280,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
             <EditText
                 android:id="@+id/r4c3"
@@ -274,6 +291,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
             <EditText
                 android:id="@+id/r4c4"
@@ -284,6 +302,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
             <EditText
                 android:id="@+id/r4c5"
@@ -294,6 +313,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
 
         </LinearLayout>
@@ -314,6 +334,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
 
             <EditText
@@ -325,6 +346,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
             <EditText
                 android:id="@+id/r5c3"
@@ -335,6 +357,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
             <EditText
                 android:id="@+id/r5c4"
@@ -345,6 +368,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
             <EditText
                 android:id="@+id/r5c5"
@@ -355,10 +379,11 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
 
         </LinearLayout>
-        <!-- ROW FIVE -->
+        <!-- ROW SIX -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -375,6 +400,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
 
             <EditText
@@ -386,6 +412,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
             <EditText
                 android:id="@+id/r6c3"
@@ -396,6 +423,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
             <EditText
                 android:id="@+id/r6c4"
@@ -406,6 +434,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
             <EditText
                 android:id="@+id/r6c5"
@@ -416,6 +445,7 @@
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:background="@drawable/custom_input"/>
 
         </LinearLayout>

@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
 
                                 Toast.makeText(MainActivity.this, "CONGRATILATION " + userName, Toast.LENGTH_LONG).show();
 
-                          
+
 
                      } else if (randomWord.charAt(i) == letter) {
 
