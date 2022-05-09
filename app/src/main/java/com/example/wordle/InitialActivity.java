@@ -68,8 +68,8 @@ public class InitialActivity extends AppCompatActivity {
 
                 }else{
                     Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
-                    mainActivity.putExtra("userChoice", userChoiceStr);
-                    mainActivity.putExtra("userName", userNameStr);
+                   // mainActivity.putExtra("userChoice", userChoiceStr);
+                  //  mainActivity.putExtra("userName", userNameStr);
 
                     SharedPreferences.Editor editor= sp.edit();
 

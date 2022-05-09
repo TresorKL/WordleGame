@@ -3,7 +3,9 @@ package com.example.wordle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -45,9 +47,14 @@ public class MainActivity extends AppCompatActivity {
 
         int userChoice;
 
+        SharedPreferences sp = getApplicationContext().getSharedPreferences("MyUserPrefs", Context.MODE_PRIVATE);
 
-        String userChoiceStr = getIntent().getStringExtra("userChoice");
-        String userName = getIntent().getStringExtra("userName");
+
+        String userChoiceStr = sp.getString("userChoice","");
+        String userName = sp.getString("userName","");
+
+       // String userChoiceStr = getIntent().getStringExtra("userChoice");
+       /// String userName = getIntent().getStringExtra("userName");
 
         Toast.makeText(MainActivity.this,userChoiceStr, Toast.LENGTH_LONG).show();
 
