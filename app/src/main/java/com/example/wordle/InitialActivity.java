@@ -2,7 +2,9 @@ package com.example.wordle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -17,6 +19,7 @@ public class InitialActivity extends AppCompatActivity {
 
     Button startGame;
     Button howToPlay;
+    SharedPreferences sp;
 
 
     @Override
@@ -36,6 +39,9 @@ public class InitialActivity extends AppCompatActivity {
 
 
          startGame = findViewById(R.id.startGame);
+
+         // initializing the sgaredperferences
+        sp = getSharedPreferences("MyUserPrefs", Context.MODE_PRIVATE);
 
         RadioGroup radioGroup =(RadioGroup)findViewById(R.id.files);
 
@@ -64,6 +70,13 @@ public class InitialActivity extends AppCompatActivity {
                     Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
                     mainActivity.putExtra("userChoice", userChoiceStr);
                     mainActivity.putExtra("userName", userNameStr);
+
+                    SharedPreferences.Editor editor= sp.edit();
+
+                    editor.putString("userChoice", userChoiceStr);
+                    editor.putString("userName", userNameStr);
+                    editor.commit();
+
                     startActivity(mainActivity);
                 }
 

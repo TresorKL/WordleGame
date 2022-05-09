@@ -143,12 +143,12 @@ public class MainActivity extends AppCompatActivity {
                                 Toast.makeText(MainActivity.this, "CONGRATILATION " + userName, Toast.LENGTH_LONG).show();
 
 
-
+                      // IF WORD EXIST AND CORRECT POSITION
                      } else if (randomWord.charAt(i) == letter) {
 
                           setColorLetterExistCorrectPosition(rowCount, i);
 
-
+                        // IF WORD EXIST BUT WRONG POSITION
                       } else if (randomWord.indexOf(letter) != -1) {
 
                           setColorLetterExistWrongPosition(rowCount, i);
