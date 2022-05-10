@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
@@ -214,8 +215,23 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-       // return super.onOptionsItemSelected(item);
 
+
+        int id = item.getItemId();
+
+        if(id==R.id.howToP){
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.theverge.com/22892044/wordle-free-game-online-how-to-puzzle"));
+            startActivity(browserIntent);
+
+            return true;
+        }else if(id==R.id.editP){
+            Intent updatePrefs = new Intent(getApplicationContext(),Preference.class);
+            startActivity(updatePrefs);
+            return true;
+        }
+
+
+        return super.onOptionsItemSelected(item);
 
     }
 

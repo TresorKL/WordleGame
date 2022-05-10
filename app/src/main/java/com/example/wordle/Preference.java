@@ -13,9 +13,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 
-public class Preferences extends AppCompatActivity {
+public class Preference extends AppCompatActivity {
 
-    Button startGame;
+    Button updatePrefs;
 
     SharedPreferences sp;
 
@@ -24,17 +24,18 @@ public class Preferences extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_initial);
+        setContentView(R.layout.activity_preference);
 
 
-        startGame = findViewById(R.id.startGame);
 
-        // initializing the sgaredperferences
+        updatePrefs = findViewById(R.id.updatePrefs);
+
+        // initializing the shared preferences
         sp = getSharedPreferences("MyUserPrefs", Context.MODE_PRIVATE);
 
         RadioGroup radioGroup =(RadioGroup)findViewById(R.id.files);
 
-        startGame.setOnClickListener(new View.OnClickListener() {
+      updatePrefs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 

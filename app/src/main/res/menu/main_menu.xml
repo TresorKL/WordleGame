@@ -7,6 +7,6 @@
         android:id="@+id/howToP"
         />
     <item android:title="Edit Preferences"
-        android:id="@+id/edit"
+        android:id="@+id/editP"
         />
 </menu>

@@ -40,7 +40,7 @@ public class InitialActivity extends AppCompatActivity {
 
          startGame = findViewById(R.id.startGame);
 
-         // initializing the sgaredperferences
+        // initializing the shared preferences
         sp = getSharedPreferences("MyUserPrefs", Context.MODE_PRIVATE);
 
         RadioGroup radioGroup =(RadioGroup)findViewById(R.id.files);
