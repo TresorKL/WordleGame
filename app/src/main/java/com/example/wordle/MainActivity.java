@@ -1,5 +1,6 @@
 package com.example.wordle;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -10,6 +11,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -35,9 +37,6 @@ public class MainActivity extends AppCompatActivity {
     Button revealWordBtn;
 
 
-
-
-
     private Toolbar myToolbar;
 
     @Override
@@ -53,8 +52,7 @@ public class MainActivity extends AppCompatActivity {
         String userChoiceStr = sp.getString("userChoice","");
         String userName = sp.getString("userName","");
 
-       // String userChoiceStr = getIntent().getStringExtra("userChoice");
-       /// String userName = getIntent().getStringExtra("userName");
+
 
         Toast.makeText(MainActivity.this,userChoiceStr, Toast.LENGTH_LONG).show();
 
@@ -209,10 +207,19 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-
-
-
 //------------------------------------------------------------------------------------------------------
+    // this method helps to access menu items
+//------------------------------------------------------------------------------------------------------
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+       // return super.onOptionsItemSelected(item);
+
+
+    }
+
+    //------------------------------------------------------------------------------------------------------
     // this method helps to reset everything so the user can be able to play again
 //------------------------------------------------------------------------------------------------------
 public void playAgain() {
