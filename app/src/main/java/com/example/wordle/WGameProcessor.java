@@ -36,10 +36,6 @@ public class WGameProcessor {
 
 
             AssetManager am = myContext.getAssets();
-
-
-
-
             if(userChoice==1) {
                 mainFile = am.open("wrdl5.txt");
 

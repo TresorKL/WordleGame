@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        // toat notification to notifiy the of the file that the user chose
         Toast.makeText(MainActivity.this,userChoiceStr, Toast.LENGTH_LONG).show();
 
         if(userChoiceStr.compareTo("File 1")==0){
@@ -146,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
                                 Drawable stylebtn = getResources().getDrawable(R.drawable.custom_small_btn);
                                 playAgainBtn.setBackground(stylebtn);
 
-                                Toast.makeText(MainActivity.this, "CONGRATILATION " + userName, Toast.LENGTH_LONG).show();
+                                Toast.makeText(MainActivity.this, "CONGRATILATIONS " + userName, Toast.LENGTH_LONG).show();
 
 
                       // IF WORD EXIST AND CORRECT POSITION
